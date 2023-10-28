@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Upload Files</title>
+</head>
+<body>
+<h1>Choose a File</h1>
+    <form action = "/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" multiple />
+        <h1>Upload the File</h1>
+        Alternative Address Pattern: <input type ="text" id="addressFormat" name="addressFormat" value="\s\d{1,6}\s[^(0-9)]*"/>
+        <br>
+
+        City: <input type ="text" id="cityName" name="cityName" value="Waterford"/>
+        <br>
+
+        State: <input type ="text" id="stateName" name="stateName" value="MI"/>
+        <br><br>
+        <input type = "submit" name ="form" value="Upload">
+
+    </form>
+
+<h1><a href="{{ url_for('records') }}">Records</a></h1>
+</body>
+</html>

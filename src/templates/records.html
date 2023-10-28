@@ -1,0 +1,28 @@
+
+<h1>Records</h1>
+<a href="{{ url_for('upload') }}">Insert Records</a>
+<div>
+    <button onclick="writeCSV(records)">Export as CSV</button>
+</div>
+
+
+<table border="1">
+
+    <th style="background-color: red">Bad Addresses</th>
+    {% for bad in badRecords %}
+    <tr>
+        <th> {{ bad }}</th>
+    </tr>
+    {% endfor %}
+
+    <th style="background-color: green">Full Addresses</th>
+    {% for record in records %}
+    <tr>
+        <th> {{ record }} </th>
+    </tr>
+    {% endfor %}
+
+
+
+
+</table>
